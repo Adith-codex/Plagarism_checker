@@ -1,201 +1,154 @@
-# Plagiarism Checker 🧾
+# 🔍 Plagiarism Checker
+### A Python-Based Plagiarism Detection System
 
-A free, offline plagiarism detection tool that uses AI-powered semantic analysis and TF-IDF algorithms to identify similarities between documents.
-
-## 🚀 Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/Shreyas20004/Plagarism_checker.git
-cd Plagarism_checker
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Build a reference corpus (optional but recommended)
-python build_corpus.py
-
-# Run the application
-streamlit run app.py
-```
-
-Then open your browser to `http://localhost:8501`
-
-## ✨ Features
-
-- 🔒 **Completely Offline** - Your documents never leave your machine
-- 📄 **Multiple Formats** - Supports PDF and DOCX files
-- 🤖 **Dual Analysis** - Combines TF-IDF and semantic similarity
-- 📊 **Detailed Reports** - Generates professional PDF reports
-- 📚 **Customizable Corpus** - Build your own reference database
-- 🎨 **Easy to Use** - Simple Streamlit web interface
-
-## 📖 Documentation
-
-**Comprehensive documentation is available in the [Project Wiki](https://github.com/Shreyas20004/Plagarism_checker/wiki)**
-
-### Quick Links
-
-- **[🏠 Home](https://github.com/Shreyas20004/Plagarism_checker/wiki/Home.md)** - Overview and introduction
-- **[💾 Installation Guide](wiki/Installation.md)** - Detailed setup instructions
-- **[🚀 Usage Guide](https://github.com/Shreyas20004/Plagarism_checker/wiki/Usage.md)** - How to use the plagiarism checker
-- **[📖 Building Corpus](https://github.com/Shreyas20004/Plagarism_checker/wiki/Building-Corpus.md)** - Create your reference database
-- **[🔧 API Reference](https://github.com/Shreyas20004/Plagarism_checker/wiki/API-Reference.md)** - Technical documentation
-- **[🏗️ Architecture](https://github.com/Shreyas20004/Plagarism_checker/wiki/Architecture.md)** - System design details
-- **[❓ FAQ](https://github.com/Shreyas20004/Plagarism_checker/wiki/FAQ.md)** - Common questions and troubleshooting
-
-## 🎯 How It Works
-
-1. **Upload** your document (PDF or DOCX)
-2. **Extract** and preprocess the text
-3. **Compare** against local corpus using:
-   - TF-IDF vectorization for statistical matching
-   - Sentence transformers for semantic similarity
-4. **View** detailed similarity scores
-5. **Download** a comprehensive PDF report
-
-## 🛠️ Technology Stack
-
-- **Streamlit** - Web interface
-- **scikit-learn** - TF-IDF vectorization
-- **sentence-transformers** - Semantic similarity (AI)
-- **NLTK** - Text preprocessing
-- **PyPDF2** - PDF text extraction
-- **python-docx** - DOCX file handling
-- **ReportLab** - PDF report generation
-
-## 📋 Requirements
-
-- Python 3.7 or higher
-- 4 GB RAM (8 GB recommended)
-- 500 MB disk space (2 GB with corpus)
-- Internet connection (for initial setup only)
-
-## 🔧 Installation
-
-### Prerequisites
-
-```bash
-# Ensure Python 3.7+ is installed
-python --version
-```
-
-### Install Dependencies
-
-```bash
-# Create virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install requirements
-pip install -r requirements.txt
-```
-
-See the [Installation Guide](https://github.com/Shreyas20004/Plagarism_checker/wiki/Installation.md) for detailed instructions and troubleshooting.
-
-## 📚 Building a Corpus
-
-A corpus is essential for plagiarism detection. It's the reference database your documents are compared against.
-
-### Automated Corpus Building
-
-```bash
-# General purpose corpus (Wikipedia, arXiv, Gutenberg)
-python build_corpus.py
-
-# Research-focused corpus (900+ academic papers)
-python build_research_corpus.py
-```
-
-### Manual Corpus Building
-
-1. Convert documents to plain text (.txt)
-2. Place them in the `corpus/` directory
-3. Run the plagiarism check
-
-See [Building Corpus Guide](https://github.com/Shreyas20004/Plagarism_checker/wiki/Building-Corpus.md) for more details.
-
-## 🎓 Use Cases
-
-- **Academic Institutions** - Check student assignments for plagiarism
-- **Content Creators** - Verify originality of articles and content
-- **Researchers** - Compare papers against existing literature
-- **Publishers** - Screen submissions for duplicate content
-- **Businesses** - Validate content before publication
-
-## 🔒 Privacy & Security
-
-- ✅ All processing happens locally on your machine
-- ✅ No data is sent to external servers
-- ✅ Your documents remain completely private
-- ✅ No cloud storage or third-party services
-- ✅ Open source and auditable code
-
-## 📊 Understanding Results
-
-| Similarity Score | Interpretation |
-|-----------------|----------------|
-| 0-20% | Low similarity - Likely original content |
-| 20-40% | Moderate similarity - Some common phrases |
-| 40-60% | High similarity - Significant overlap |
-| 60-80% | Very high similarity - Substantial copying likely |
-| 80-100% | Extremely high similarity - Nearly identical |
-
-**Note:** Always review flagged content manually. High similarity doesn't always indicate plagiarism.
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-- 🐛 Report bugs and issues
-- 💡 Suggest new features
-- 📝 Improve documentation
-- 🔧 Submit pull requests
-- ⭐ Star the repository
-
-## 📝 License
-
-This project is open source and available for educational and research purposes.
-
-## 🆘 Getting Help
-
-- **Documentation:** Check the [Wiki](https://github.com/Shreyas20004/Plagarism_checker/wiki)
-- **FAQ:** See [Frequently Asked Questions](https://github.com/Shreyas20004/Plagarism_checker/wiki/FAQ.md)
-- **Issues:** Report bugs on [GitHub Issues](https://github.com/Shreyas20004/Plagarism_checker/issues)
-
-## 🗺️ Roadmap
-
-Future enhancements under consideration:
-
-- [ ] Support for more file formats (TXT, RTF, ODT)
-- [ ] Batch processing of multiple documents
-- [ ] REST API for programmatic access
-- [ ] Enhanced visualization of results
-- [ ] Multi-language support
-- [ ] GPU acceleration for faster processing
-
-## 📸 Screenshots
-
-*Coming soon - Run the application to see the interface!*
-
-## 🙏 Acknowledgments
-
-This project uses several excellent open-source libraries:
-- [Streamlit](https://streamlit.io/) for the web interface
-- [sentence-transformers](https://www.sbert.net/) for semantic analysis
-- [scikit-learn](https://scikit-learn.org/) for TF-IDF
-- [NLTK](https://www.nltk.org/) for text processing
-
-## ⚠️ Disclaimer
-
-This tool is provided as-is for educational and research purposes. While it uses advanced algorithms, no automated plagiarism detector is perfect. Always:
-- Review flagged content manually
-- Consider context and field-specific terminology
-- Use as part of a comprehensive evaluation process
-- Combine with human judgment
+A web-based application designed to identify textual similarities and support plagiarism checking through Natural Language Processing (NLP).
 
 ---
 
-**Made with ❤️ for the open-source community**
+## 📌 Project Overview
 
-For detailed documentation, visit the [Project Wiki](https://github.com/Shreyas20004/Plagarism_checker/wiki)
+The **Plagiarism Checker** is a Python-based application developed to analyze text and identify similarities between submitted content and available reference materials.
+
+The project aims to provide a simple and accessible interface for checking content originality and supporting academic document analysis.
+
+## ✨ Features
+
+- **Text Analysis:** Analyze submitted textual content.
+- **Plagiarism Detection:** Identify similarities with available reference content.
+- **Reference Corpus:** Build and use a collection of reference documents.
+- **Research Corpus:** Support the preparation of research-related reference materials.
+- **Web Interface:** Interact with the application through a user-friendly interface.
+- **Python-Based:** Developed using Python and supporting libraries.
+
+*Note: Confirm these features against the implemented application before publishing.*
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Core programming language |
+| Streamlit | Web application interface |
+| NLP | Text processing and analysis |
+| Git & GitHub | Version control and project hosting |
+
+## 📂 Project Structure
+
+```text
+Plagarism_checker/
+│
+├── app.py
+├── requirements.txt
+├── build_corpus.py
+├── build_research_corpus.py
+│
+├── utils/
+│   └── [Utility modules]
+│
+├── IMPLEMENTATION_SUMMARY.md
+└── README.md
+```
+
+## ⚙️ Installation and Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Adith-codex/Plagarism_checker.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd Plagarism_checker
+```
+
+### 3. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+### 4. Activate the virtual environment
+
+**Windows:**
+
+```bash
+venv\Scripts\activate
+```
+
+### 5. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 6. Run the application
+
+```bash
+streamlit run app.py
+```
+
+### 7. Open the application
+
+Visit the following address in your browser:
+
+```text
+http://localhost:8501
+```
+
+## 🔄 System Workflow
+
+1. Launch the application.
+2. Provide the text or documents supported by the application.
+3. Process the submitted content.
+4. Analyze textual similarities against the available reference materials.
+5. Review the generated results.
+
+## 📸 Application Screenshots
+
+Add screenshots of your actual application in a folder named `screenshots`.
+
+Once uploaded, display them here:
+
+### Home Page
+
+![Home Page](screenshots/home.png)
+
+### Plagiarism Detection Results
+
+![Results](screenshots/results.png)
+
+### Analysis Interface
+
+![Analysis Interface](screenshots/analysis.png)
+
+## 🚀 Future Enhancements
+
+- Support for additional document formats.
+- Improved NLP-based similarity analysis.
+- Semantic similarity detection.
+- Advanced plagiarism visualization.
+- Downloadable plagiarism reports.
+- Improved user interface and experience.
+- Integration with larger reference document collections.
+
+## 🎯 Applications
+
+- Academic assignments and projects.
+- Research document analysis.
+- Content originality checking.
+- Educational institutions.
+
+## 👨‍💻 Developer
+
+**Adith Pradeep V**
+
+GitHub: [@Adith-codex](https://github.com/Adith-codex)
+
+## 📜 Project Information
+
+This project is developed for educational and academic purposes as a practical application of Python and Natural Language Processing.
+
+---
+
+⭐ If you find this project useful, consider giving the repository a star!
